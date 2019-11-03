@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: koa-backend
+  namespace: default
+spec:
+  selector:
+    app: koa-backend
+  ports:
+    - name: http
+      port: 80
+  type: LoadBalancer

@@ -1,0 +1,23 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: koa-backend
+  name: koa-backend
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: koa-backend
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: koa-backend
+        version: v1
+    spec:
+      containers:
+        - image: gcr.io/hov90901/koa-backend:latest
+          name: koa-backend
+          ports:
+            - containerPort: 80

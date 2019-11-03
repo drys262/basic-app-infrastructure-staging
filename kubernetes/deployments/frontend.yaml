@@ -1,0 +1,23 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: koa-frontend
+  name: koa-frontend
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: koa-frontend
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: koa-frontend
+        version: v1
+    spec:
+      containers:
+        - image: gcr.io/hov90901/koa-frontend@sha256:4e47caeecfa808ce7201fce778e78ebe4f20fb3d30608bc23c265c2a760b936d
+          name: koa-frontend
+          ports:
+            - containerPort: 80
