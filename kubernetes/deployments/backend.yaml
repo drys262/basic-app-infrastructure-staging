@@ -17,7 +17,7 @@ spec:
         version: v1
     spec:
       containers:
-        - image: gcr.io/hov90901/koa-backend:latest
           name: koa-backend
+        - image: gcr.io/hov90901/koa-backend:latest
           ports:
             - containerPort: 80
