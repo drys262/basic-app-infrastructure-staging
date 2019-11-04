@@ -4,7 +4,6 @@ metadata:
   labels:
     app: koa-backend
   name: koa-backend
-  namespace: default
 spec:
   selector:
     matchLabels:
@@ -17,7 +16,7 @@ spec:
         version: v1
     spec:
       containers:
-        - name: koa-backend
-          image: gcr.io/hov90901/koa-backend:latest
-          ports:
-            - containerPort: 80
+      - image: gcr.io/hov90901/koa-backend:d021bde
+        name: koa-backend
+        ports:
+        - containerPort: 80
