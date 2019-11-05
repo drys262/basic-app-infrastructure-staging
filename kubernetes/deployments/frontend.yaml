@@ -4,7 +4,6 @@ metadata:
   labels:
     app: koa-frontend
   name: koa-frontend
-  namespace: default
 spec:
   selector:
     matchLabels:
@@ -17,7 +16,7 @@ spec:
         version: v1
     spec:
       containers:
-        - name: koa-frontend
-          image: gcr.io/hov90901/koa-frontend@sha256:4e47caeecfa808ce7201fce778e78ebe4f20fb3d30608bc23c265c2a760b936d
-          ports:
-            - containerPort: 80
+      - image: gcr.io/hov90901/koa-frontend:ea0ba26
+        name: koa-frontend
+        ports:
+        - containerPort: 80
