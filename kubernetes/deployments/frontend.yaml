@@ -16,7 +16,7 @@ spec:
         version: v1
     spec:
       containers:
-      - image: gcr.io/hov90901/koa-frontend:ea0ba26
+      - image: gcr.io/hov90901/koa-frontend:720d7ba
         name: koa-frontend
         ports:
         - containerPort: 80
